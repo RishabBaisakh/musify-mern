@@ -1,19 +1,52 @@
 .login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__header {
+  display: flex;
+  padding: var(--app-padding);
+  box-shadow: 5px 10px 18px lightblue;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__headerRight {
+}
+
+.login__header > img {
+  height: 100px;
+}
+
+.login__body {
+  display: flex;
+  margin-top: 100px;
+  padding: var(--app-padding);
+  height: 50vh;
+}
+
+.login__bodyLeft {
+  flex: 0.6;
+}
+
+.login__bodyRight {
   display: grid;
   place-items: center;
-  height: 100vh;
-  background-color: white;
+  flex: 0.4;
+  border-left: 1px solid lightgray;
+  padding: 50px 0;
 }
 
-.login > img {
-  width: 100%;
-}
-
-.login > a {
+.login__bodyRightLoginButton > a {
   padding: 20px;
   border-radius: 99px;
   background-color: #1db954;
   font-weight: 800;
   color: white;
   text-decoration: none;
+  transition: 200ms background-color ease-in;
+}
+
+.login__bodyRightLoginButton > a:hover {
+  background-color: #19a34a;
 }
