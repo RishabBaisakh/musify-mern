@@ -1,8 +1,10 @@
 export const initialState = {
+  token: null,
   user: null,
   playlists: [],
   playing: false,
   item: null,
+  categories: [],
 };
 
 const reducer = (state, action) => {
@@ -13,6 +15,7 @@ const reducer = (state, action) => {
         user: action.user,
       };
     case "SET_TOKEN":
+      console.log("Set token");
       return {
         ...state,
         token: action.token,
@@ -26,6 +29,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         discover_weekly: action.discover_weekly,
+      };
+    case "SET_CATEGORIES":
+      return {
+        ...state,
+        categories: action.categories,
       };
     default:
       return state;

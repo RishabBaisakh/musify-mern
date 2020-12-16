@@ -1,46 +1,42 @@
 import React from "react";
-import "./Body.css";
-import Header from "./Header";
-import { useDataLayerValue } from "./DataLayer";
+import "./Home.css";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import SongRow from "./SongRow";
+import { useDataLayerValue } from "./DataLayer";
 
-function Body({ spotify }) {
+function Home() {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
 
-  console.log("discover_weekly => ", discover_weekly);
   return (
-    <div className="body">
-      <Header spotify={spotify} />
-
-      <div className="body__info">
+    <div className="home">
+      <div className="home__info">
         <img
           src="https://www.adweek.com/files/2016_Aug/spotify-quote.gif"
           alt=""
         ></img>
 
-        <div className="body__infoText">
+        <div className="home__infoText">
           <strong>PLAYLIST</strong>
           <h2>Discover Weekly</h2>
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
 
-      <div className="body__songs">
-        <div className="body__icons">
-          <PlayCircleFilledIcon className="body__shuffle" />
+      <div className="home__songs">
+        <div className="home__icons">
+          <PlayCircleFilledIcon className="home__shuffle" />
           <FavoriteIcon fontSize="large" />
           <MoreHorizIcon />
         </div>
 
-        {discover_weekly?.tracks.items.map((item) => (
-          <SongRow track={item.track} />
+        {discover_weekly?.tracks.items.map((item, index) => (
+          <SongRow key={index} track={item.track} />
         ))}
       </div>
     </div>
   );
 }
 
-export default Body;
+export default Home;

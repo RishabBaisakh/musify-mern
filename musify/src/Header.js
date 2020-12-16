@@ -10,10 +10,12 @@ import AccountMenu from "./AccountMenu";
 function Header() {
   const [menuSelect, setMenuSelect] = useState(false);
   const [{ user }, dispatch] = useDataLayerValue();
-
   const accountDropdown = () => setMenuSelect(!menuSelect);
+  const menuActiveStyle = {
+    backgroundColor: "rgb(68, 65, 65)",
+    borderRadius: "30px",
+  };
 
-  console.log("user => ", user);
   return (
     <div className="header">
       <div className="header__left">
@@ -21,7 +23,11 @@ function Header() {
         <input placeholder="Search for Artist, Songs, or Albums" type="text" />
       </div>
 
-      <div onClick={accountDropdown} className="header__right">
+      <div
+        // style={menuSelect ? menuActiveStyle : {}}
+        onClick={accountDropdown}
+        className="header__right"
+      >
         <Avatar src={user?.images[0]?.url} alt="RB" />
         <h4>{user?.display_name}</h4>
         {menuSelect ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}

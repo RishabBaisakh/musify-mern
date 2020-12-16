@@ -1,15 +1,20 @@
 import React from "react";
 import "./Player.css";
 import Sidebar from "./Sidebar";
-import Body from "./Body";
 import Footer from "./Footer";
+import Header from "./Header";
+import Home from "./Home";
 
 function Player({ spotify }) {
   return (
     <div className="player">
+      {/* <Router></Router> */}
+      <Sidebar />
+
       <div className="player__body">
-        <Sidebar />
-        <Body spotify={spotify} />
+        <Header />
+
+        <Home />
       </div>
       <Footer />
     </div>

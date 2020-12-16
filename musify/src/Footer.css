@@ -10,7 +10,7 @@
 }
 
 .footer__right * .MuiSlider-root {
-  color: green;
+  color: rgb(43, 86, 187);
 }
 
 .footer__left {
@@ -29,7 +29,7 @@
 }
 
 .footer__green {
-  color: green;
+  color: rgb(43, 86, 187);
 }
 
 .footer__songInfo > h4 {
