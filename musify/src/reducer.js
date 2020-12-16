@@ -6,28 +6,23 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-  console.log("Reached reducer!");
   switch (action.type) {
     case "SET_USER":
-      console.log("SET_USER");
       return {
         ...state,
         user: action.user,
       };
     case "SET_TOKEN":
-      console.log("SET_TOKEN");
       return {
         ...state,
         token: action.token,
       };
     case "SET_PLAYLISTS":
-      console.log("SET_PLAYLISTS");
       return {
         ...state,
         playlists: action.playlists,
       };
     case "SET_DISCOVER_WEEKLY":
-      console.log("SET_DISCOVER_WEEKLY");
       return {
         ...state,
         discover_weekly: action.discover_weekly,
