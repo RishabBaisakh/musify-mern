@@ -1,6 +1,30 @@
 .accountMenu {
-  /* display: none; */
+  display: none;
   position: absolute;
-  background-color: rgb(90, 87, 87);
+  background-color: rgb(68, 65, 65);
   top: 80px;
+  width: 140px;
+  right: 32px;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px black;
+}
+
+.accountMenu > h4 {
+  color: lightgray;
+  transition: 150ms color ease-in;
+  font-size: 16px;
+  padding: 6px;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.accountMenu > h4:hover {
+  background-color: rgba(92, 92, 92, 0.692);
+  color: white;
+}
+
+.accountMenu__logout {
+  margin-top: 5px;
+  border-top: 1px solid lightgray;
 }
