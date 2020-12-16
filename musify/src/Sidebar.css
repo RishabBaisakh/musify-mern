@@ -7,6 +7,10 @@
   background-color: white;
 }
 
+.sidebar > a {
+  text-decoration: none;
+}
+
 .sidebar__logo {
   margin-right: auto;
   height: 70px;

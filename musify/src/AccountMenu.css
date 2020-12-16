@@ -10,6 +10,11 @@
   box-shadow: 0 2px 5px black;
 }
 
+.accountMenu__profileLink {
+  text-decoration: none;
+}
+
+.accountMenu__profileLink > h4,
 .accountMenu > h4 {
   color: lightgray;
   transition: 150ms color ease-in;
@@ -19,6 +24,7 @@
   border-radius: 3px;
 }
 
+.accountMenu__profileLink > h4:hover,
 .accountMenu > h4:hover {
   background-color: rgba(92, 92, 92, 0.692);
   color: white;

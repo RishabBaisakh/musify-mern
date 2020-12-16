@@ -13,12 +13,14 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <img className="sidebar__logo" src="MusifyLogo.PNG" />
-      <SidebarOption title="Home" Icon={HomeIcon} />
-      {/* <Link to="/search"> */}
-      <SidebarOption title="Search" Icon={SearchIcon} />
-      {/* </Link> */}
+      <Link to="/">
+        <SidebarOption title="Home" Icon={HomeIcon} />
+      </Link>
+      <Link to="search">
+        <SidebarOption title="Search" Icon={SearchIcon} />
+      </Link>
+      {/* <Link></Link> */}
       <SidebarOption title="Your Library" Icon={LibraryMusicIcon} />
-
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />

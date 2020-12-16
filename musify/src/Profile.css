@@ -1,0 +1,27 @@
+.profile__info {
+  display: flex;
+  box-shadow: 0 2px 10px gray;
+  padding: 10px;
+}
+
+.profile__infoAvatar > .MuiAvatar-root {
+  width: 250px;
+  height: 250px;
+}
+
+.profile__infoDetails {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 20px;
+}
+
+.profile__infoDetails > p {
+  color: white;
+  font-weight: 500;
+}
+
+.profile__infoDetails > h1 {
+  color: white;
+  font-size: 80px;
+}

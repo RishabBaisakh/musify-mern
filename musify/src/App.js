@@ -41,6 +41,10 @@ function App() {
         });
       });
 
+      spotify.getPlaylist("").then((response) => {
+        console.log(response);
+      });
+
       spotify.getPlaylist("37i9dQZEVXbraniIIoy8Us").then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
@@ -48,12 +52,10 @@ function App() {
         });
       });
 
-      spotify.getCategories().then((categories) => {
-        console.log("categories => ", categories);
-
+      spotify.getCategories().then((response) => {
         dispatch({
           type: "SET_CATEGORIES",
-          categories: categories,
+          categories: response.categories,
         });
       });
     }
