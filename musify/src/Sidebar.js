@@ -19,8 +19,6 @@ function Sidebar() {
       <Link to="search">
         <SidebarOption title="Search" Icon={SearchIcon} />
       </Link>
-      {/* <Link></Link> */}
-      <SidebarOption title="Your Library" Icon={LibraryMusicIcon} />
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />

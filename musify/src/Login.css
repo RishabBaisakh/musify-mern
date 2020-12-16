@@ -1,6 +1,7 @@
 .login {
   display: flex;
   flex-direction: column;
+  text-align: justify;
 }
 
 .login__header {
@@ -9,9 +10,6 @@
   box-shadow: 5px 10px 18px lightblue;
   align-items: center;
   justify-content: space-between;
-}
-
-.login__headerRight {
 }
 
 .login__header > img {
@@ -27,6 +25,8 @@
 
 .login__bodyLeft {
   flex: 0.6;
+  margin: 20px;
+  color: red;
 }
 
 .login__bodyRight {

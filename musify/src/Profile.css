@@ -25,3 +25,52 @@
   color: white;
   font-size: 80px;
 }
+
+.profile__playlists {
+  margin-top: 30px;
+}
+
+.profile__playlists > h3 {
+  color: white;
+}
+
+.profile__playlistsContainer {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.profile__playlistCard {
+  position: relative;
+  background-color: rgba(173, 216, 230, 0.411);
+  margin-right: 15px;
+  padding: 17px;
+}
+
+.profile__playlistCard > img {
+  width: 150px;
+  box-shadow: 0 1px 5ps black;
+}
+
+.profile__playlistCard > h4 {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.profile__playlistCard > .MuiSvgIcon-root {
+  font-size: 50px;
+  position: absolute;
+  color: green;
+  display: none;
+  left: 110px;
+  bottom: 100px;
+}
+
+.profile__playlistCard:hover .MuiSvgIcon-root {
+  display: block;
+}
+
+.profile__playlistCard:hover {
+  background-color: lightblue;
+}
