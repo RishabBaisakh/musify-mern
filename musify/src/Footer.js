@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Footer.css";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
@@ -6,10 +6,23 @@ import SkipNextIcon from "@material-ui/icons/SkipNext";
 import ShuffleIcon from "@material-ui/icons/Shuffle";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import { Grid, Slider } from "@material-ui/core";
+import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 
 function Footer() {
+  const audios = ["Audio_One.mp3", "Audio_Two.mp3", "Audio_Three.mp3"];
+
+  const audio = new Audio();
+  audio.src = audios[0];
+
+  const play = () => {
+    audio.play();
+  };
+
+  const pause = () => {
+     audio.pause();
+  }
   return (
     <div className="footer">
       <div className="footer__left">
@@ -26,14 +39,15 @@ function Footer() {
       <div className="footer__center">
         <ShuffleIcon className="footer__green" />
         <SkipPreviousIcon className="footer__icon" />
-        <PlayCircleOutlineIcon fontSize="large" className="footer__icon" />
+        <PlayCircleOutlineIcon onClick={play} fontSize="large" className="footer__icon" />
+        <PauseCircleOutlineIcon onClick={pause} fontSize="large" className="footer__icon" />
         <SkipNextIcon className="footer__icon" />
         <RepeatIcon className="footer__green" />
       </div>
 
       <div className="footer__right">
         <Grid container spacing={2}>
-          <Grid item>
+          <Grid item >
             <PlaylistPlayIcon />
           </Grid>
           <Grid item>

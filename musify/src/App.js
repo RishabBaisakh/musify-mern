@@ -59,8 +59,6 @@ function App() {
         });
       });
     }
-
-    console.log("Recieved token => ", _token);
   }, []);
 
   return (
